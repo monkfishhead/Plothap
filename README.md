@@ -1,4 +1,7 @@
 # haplotype
+How to run:
+Install the library as below. Then open main.py with PyCharm and run the script.
+
 R Library needed:
 1. pegas
 2. muscle
