@@ -1,0 +1,51 @@
+>Western Palaearctic
+72	-23
+36	-23
+36	51
+72	51
+>Eastern Palaearctic
+72	51
+72	169
+28	169
+28	85
+31	78
+36	74
+36	51
+>Oriental
+28	131
+28	85
+31	78
+36	74
+25	66
+-10.4	66
+-10.4	131
+>Australian
+-10.4	105
+-10.4	179
+-48	179
+-48	105
+>Ethiopian
+36	74
+-40	28
+-40	-24
+36	-24
+>Neotropical
+19	-96
+22	-90
+22	-86
+13	-80
+13	-28
+-58	-28
+-58	-105
+19	-105
+>Nearctic
+72	-51
+72	-168
+19	-168
+19	-105
+19	-96
+22	-90
+22	-86
+13	-80
+13	-51
+# notice: The points of adjacent rows must be adjacent on map. Column 1 is latitude and 2 is longitude.
