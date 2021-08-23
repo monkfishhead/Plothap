@@ -23,6 +23,48 @@ def is_number(s):
     return False
 
 
+class ToolTip(object):
+    def __init__(self, widget):
+        self.widget = widget
+        self.tipwindow = None
+        self.id = None
+        self.x = self.y = 0
+
+    def showtip(self, text):
+        self.text = text
+        if self.tipwindow or not self.text:
+            return
+        x, y, cx, cy = self.widget.bbox("insert")
+        x = x + self.widget.winfo_rootx() + 37
+        y = y + cy + self.widget.winfo_rooty() + 27
+        self.tipwindow = tw = tk.Toplevel(self.widget)
+        tw.wm_overrideredirect(1)
+        tw.wm_geometry("+%d+%d" % (x, y))
+        label = tk.Label(tw, text=self.text, justify=tk.LEFT,
+                      background="#ffffe0", relief=tk.SOLID, borderwidth=1,
+                      font=("tahoma", "8", "normal"))
+        label.pack(ipadx=1)
+
+    def hidetip(self):
+        tw = self.tipwindow
+        self.tipwindow = None
+        if tw:
+            tw.destroy()
+
+
+def createtooltip(widget, text):
+    tool_tip = ToolTip(widget)
+
+    def enter(event):
+        tool_tip.showtip(text)
+
+    def leave(event):
+        tool_tip.hidetip()
+
+    widget.bind('<Enter>', enter)
+    widget.bind('<Leave>', leave)
+
+
 class Mainprogramme:
     def __init__(self):
         # main window
@@ -91,12 +133,16 @@ class Mainprogramme:
                               command=self.searchwindow, image=searchimg, bd=2, relief='flat')
         botsearch.grid(row=0, column=0)
 
+        createtooltip(botsearch, text='Search through BOLDsystems\nDatasets can be downloaded from here.')
+
         loadimgpath = Image.open("./icon/iload.png")
         loadimgpath = loadimgpath.resize((30, 30))
         loadimg = ImageTk.PhotoImage(loadimgpath)
         botload = tk.Button(frametool, text='Load', command=self.loadwindow, image=loadimg,
                             bd=2, relief='flat')
         botload.grid(row=0, column=1)
+
+        createtooltip(botload, text='Load file')
 
         filterimgpath = Image.open("./icon/ifilter.png")
         filterimgpath = filterimgpath.resize((30, 30))
@@ -105,11 +151,15 @@ class Mainprogramme:
                               command=self.filterwindow, image=filterimg, bd=2, relief='flat')
         botfilter.grid(row=0, column=3)
 
+        createtooltip(botfilter, text='Filter')
+
         aliimgpath = Image.open("./icon/ialignment.png")
         aliimgpath = aliimgpath.resize((30, 30))
         aliimg = ImageTk.PhotoImage(aliimgpath)
         botali = tk.Button(frametool, text='Alignment', command=self.alignmentwindow, image=aliimg, bd=2, relief='flat')
         botali.grid(row=0, column=4)
+
+        createtooltip(botali, text='Sequence alignment through MUSCLE.')
 
         sumimgpath = Image.open("./icon/iplotsum.png")
         sumimgpath = sumimgpath.resize((30, 30))
@@ -117,11 +167,15 @@ class Mainprogramme:
         botsum = tk.Button(frametool, text='Summary plot', command=self.summaryplotwindow, image=sumimg, bd=2, relief='flat')
         botsum.grid(row=0, column=5)
 
+        createtooltip(botsum, text='Summary plot for Trimming')
+
         zoominimgpath = Image.open("./icon/izoomi.png")
         zoominimgpath = zoominimgpath.resize((30, 30))
         zoominimg = ImageTk.PhotoImage(zoominimgpath)
         botzin = tk.Button(frametool, text='Zoom in', command=self.zoom_in, image=zoominimg, bd=2, relief='flat')
         botzin.grid(row=0, column=7)
+
+        createtooltip(botzin, text='Zoom in')
 
         zoomoutimgpath = Image.open("./icon/izoomo.png")
         zoomoutimgpath = zoomoutimgpath.resize((30, 30))
@@ -129,11 +183,15 @@ class Mainprogramme:
         botzout = tk.Button(frametool, text='Zoom out', command=self.zoom_out, image=zoomoutimg, bd=2, relief='flat')
         botzout.grid(row=0, column=8)
 
+        createtooltip(botzout, text='Zoom out')
+
         plotoptionimgpath = Image.open("./icon/ioptions.png")
         plotoptionimgpath = plotoptionimgpath.resize((30, 30))
         plotoptionimg = ImageTk.PhotoImage(plotoptionimgpath)
         botpoption = tk.Button(frametool, text='Options', command=self.plotoption, image=plotoptionimg, bd=2, relief='flat')
         botpoption.grid(row=0, column=9)
+
+        createtooltip(botpoption, text='Option for plotting')
 
         toolframe_sep = tk.ttk.Separator(frametool, orient='vertical')
         toolframe_sep.grid(row=0, column=2, sticky='ns', padx=2)
