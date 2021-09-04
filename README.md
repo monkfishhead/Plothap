@@ -1,6 +1,7 @@
-# haplotype
+# Plothap
 How to run:
 Install the library as below. Then open main.py with PyCharm and run the script.
+Some functions may cost time and in this period the programme will become unresponsive, please be patient.
 
 R Library needed:
 1. pegas
