@@ -614,9 +614,10 @@ class Mainprogramme:
 
     def adddata(self):
         def addfile():
-            xmlpath = filedialog.askopenfilename(title='Choose a XML file',
+            xmlpath = filedialog.askopenfilename(title='Choose a file',
                                                  filetypes=[('XML', '*.xml'), ('FASTA', '*.fas'),
-                                                            ('Aligned FASTA', '*.afas')], multiple=True)
+                                                            ('Aligned FASTA', '*.afas'), ('All Files', '*')],
+                                                 multiple=True)
             if len(xmlpath) != 0:
                 for path in xmlpath:
                     add_datadic = {}
