@@ -104,7 +104,7 @@ class Mainprogramme:
 
         filemenu.add_command(label='New', command=self.newproject)
         filemenu.add_command(label='Search', command=self.searchwindow)
-        filemenu.add_command(label='Save', command=lambda: self.savefasta(True, False))
+        filemenu.add_command(label='Save', command=lambda: self.savefasta(True, "F"))
         filemenu.add_command(label='Load', command=self.loadwindow)
         filemenu.add_command(label='Add', command=self.adddata)
         filemenu.add_command(label='Export graphics', command=self.saveeps)
@@ -535,7 +535,7 @@ class Mainprogramme:
                     window_search.destroy()
 
                     self.console.config(state="normal")
-                    self.console.insert("end", ">Data downing, please wait....\n")
+                    self.console.insert("end", ">Data downloading, please wait....\n")
                     self.console.config(state="disable")
                     self.console.update()
 
@@ -717,23 +717,24 @@ class Mainprogramme:
             ifile.close()
 
         def saveasaligned(doc):
-            file = open(doc, "w")
+            sfile = open(doc, "w")
             for length, contents in self.sequences.items():
                 for content in contents:
-                    seq = content[0] + "\n"
-                    header = content[1].split("|")
-                    spices = header[1]
-                    country = header[2]
-                    sex = header[3]
-                    provider = header[4]
-                    geo = header[5]
-                    world = header[6]
-                    iid = header[0]
-                    outheader = ">{0}|{1}|{2}|{3}|{4}|{5}|{6}\n".format(iid, spices, country, sex, provider, geo, world)
-                    file.write(outheader)
-                    file.write(seq)
+                    sseq = content[0] + "\n"
+                    sheader = content[1].split("|")
+                    sspices = sheader[1]
+                    scountry = sheader[2]
+                    ssex = sheader[3]
+                    sprovider = sheader[4]
+                    sgeo = sheader[5]
+                    sworld = sheader[6]
+                    siid = sheader[0]
+                    southeader = ">{0}|{1}|{2}|{3}|{4}|{5}|{6}\n".format(siid, sspices, scountry, ssex,
+                                                                         sprovider, sgeo, sworld)
+                    sfile.write(southeader)
+                    sfile.write(sseq)
 
-            file.close()
+            sfile.close()
 
         if len(self.descrip.get("0.0", "2.0")) > 1:
             if readin:
@@ -758,13 +759,40 @@ class Mainprogramme:
                         self.console.see(tk.END)
                         self.console.update()
                         self.console.config(state="disable")
+
             else:
-                if align:
+                if align == "T":
                     docname = "./datafile/fornet.fas"
                     saveasaligned(docname)
-                else:
+                elif align == "F":
                     docname = "./datafile/alifas.fas"
                     saveasfas(docname)
+                elif align == "S":
+                    docname = "./datafile/aliedfas.fas"
+                    file = open(docname, "w")
+                    maxlen = max(self.seqlenlist)
+                    for le, cs in self.sequences.items():
+                        for c in cs:
+                            seq = c[0]
+                            mylen = len(seq)
+                            if mylen < maxlen:
+                                fill = (maxlen - mylen) * "-"
+                                seq = seq + fill
+                            seq = seq + "\n"
+                            header = c[1].split("|")
+                            spices = header[1]
+                            country = header[2]
+                            sex = header[3]
+                            provider = header[4]
+                            geo = header[5]
+                            world = header[6]
+                            iid = header[0]
+                            outheader = ">{0}|{1}|{2}|{3}|{4}|{5}|{6}\n".format(iid, spices, country, sex, provider,
+                                                                                geo, world)
+                            file.write(outheader)
+                            file.write(seq)
+
+                    file.close()
         else:
             messagebox.showwarning(title="Warning", message="Empty data.")
 
@@ -1240,14 +1268,14 @@ class Mainprogramme:
                         self.console.config(state="disable")
                         self.console.update()
 
-                        self.savefasta(False, False)
+                        self.savefasta(False, "F")
                         segsites = alignment_R.seqalignment(gapopen, maxiter)
-                        osegpath = "./datafile/segsites.txt"
-                        osegfile = open(osegpath, "w")
-                        segsites = list(map(str, segsites))
-                        strn = "\n"
-                        osegfile.write(strn.join(segsites))
-                        osegfile.close()
+                        # osegpath = "./datafile/segsites.txt"
+                        # osegfile = open(osegpath, "w")
+                        # segsites = list(map(str, segsites))
+                        # strn = "\n"
+                        # osegfile.write(strn.join(segsites))
+                        # osegfile.close()
 
                         # Read in aligned data
                         alignedpath = "./datafile/aliedfas.fas"
@@ -1314,6 +1342,10 @@ class Mainprogramme:
 
                         # update sequence length list
                         (self.seqlenlist, self.counter) = self.updatelength(self.sequences)
+
+                        # find out the seg sites
+                        self.savefasta(False, "S")
+                        alignment_R.segsites()
 
                         # update data description
                         alignedname = self.descrip.get("0.0", "2.0")
@@ -1462,10 +1494,10 @@ class Mainprogramme:
                         lengthopt.append(ii)
 
             if len(lengthopt) == 0:
-                messagebox.showwarning(parent=window_sumplot ,title="Warning", message="Can't find the optimal length.")
+                messagebox.showwarning(parent=window_sumplot, title="Warning", message="Can't find the optimal length.")
 
             nscorelist = [ii / ((min_ts + 1) / 10) for ii in scorelist]
-            l2 = ax1.plot(np.arange(minlen, maxlen + 1, 1), nscorelist, label="OPC", color="firebrick", linewidth=1)
+            l2 = ax1.plot(np.arange(minlen, maxlen + 1, 1), nscorelist, label="OPS", color="firebrick", linewidth=1)
 
             # chart 3: number of sequence in each length
             l3 = ax1.bar(list(count.keys()),
@@ -1490,7 +1522,7 @@ class Mainprogramme:
 
             # chart 4: Density plot
             ax2 = ax1.twinx()
-            l4 = ax2.plot(xforden, denlist, label="Density", color="blue", linewidth=1)
+            l4 = ax2.plot(xforden, denlist, label="Cumulative distribution", color="blue", linewidth=1)
             ax2.set_ylabel("Density")
             ax2.set_ylim(bottom=0)
             y2_major_locator = MultipleLocator(0.1)
@@ -1780,7 +1812,7 @@ class Mainprogramme:
 
         if len(self.descrip.get("0.0", "2.0")) > 1:
             if len(self.sequences) == 1:
-                self.savefasta(False, True)
+                self.savefasta(False, "T")
                 file = open("./datafile/group.txt", "w", encoding="utf-8")
                 for ilen, seqs in self.sequences.items():
                     for iseq in seqs:
