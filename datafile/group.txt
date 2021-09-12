@@ -1,45 +1,402 @@
-Argentina	Neotropical	New world	Artiodactyla
-Argentina	Neotropical	New world	Artiodactyla
-Argentina	Neotropical	New world	Artiodactyla
-Argentina	Neotropical	New world	Artiodactyla
-Argentina	Neotropical	New world	Artiodactyla
-Argentina	Neotropical	New world	Artiodactyla
-Argentina	Neotropical	New world	Artiodactyla
-Argentina	Neotropical	New world	Artiodactyla
-Argentina	Neotropical	New world	Artiodactyla
-Argentina	Neotropical	New world	Artiodactyla
-Argentina	Neotropical	New world	Artiodactyla
-Argentina	Neotropical	New world	Artiodactyla
-Argentina	Neotropical	New world	Artiodactyla
-Argentina	Neotropical	New world	Artiodactyla
-Argentina	Neotropical	New world	Artiodactyla
-Argentina	Neotropical	New world	Artiodactyla
-Argentina	Neotropical	New world	Artiodactyla
-Egypt	Ethiopian	Old world	Bos taurus
-Egypt	Ethiopian	Old world	Bos taurus
-Egypt	Ethiopian	Old world	Bos taurus
-Egypt	Ethiopian	Old world	Bos taurus
-Mongolia	Eastern Palaearctic	Old world	Bos
-Philippines	Oriental	Old world	Bos taurus
-Philippines	Oriental	Old world	Bos taurus
-India	Oriental	Old world	Bos taurus
-India	Oriental	Old world	Bos taurus
-India	Oriental	Old world	Bos indicus
-India	Oriental	Old world	Bos indicus
-India	Oriental	Old world	Bos indicus
-India	Oriental	Old world	Bos indicus
-India	Oriental	Old world	Bos taurus
-India	Oriental	Old world	Bos taurus
-India	Oriental	Old world	Bos taurus
-Poland	Western Palaearctic	Old world	Bos taurus
-Poland	Western Palaearctic	Old world	Bos taurus
-Poland	Western Palaearctic	Old world	Bos taurus
-Poland	Western Palaearctic	Old world	Bos taurus
-Poland	Western Palaearctic	Old world	Bos taurus
-Egypt	Ethiopian	Old world	Bos taurus
-India	Oriental	Old world	Bos taurus
-Philippines	Oriental	Old world	Bos taurus
-Poland	Western Palaearctic	Old world	Bos taurus
-Poland	Western Palaearctic	Old world	Bos taurus
-India	Oriental	Old world	Bos taurus
-India	Oriental	Old world	Bos taurus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus oblongus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+United States	Nearctic	New world	Tibellus maritimus
+United States	Nearctic	New world	Tibellus maritimus
+United States	Nearctic	New world	Tibellus maritimus
+United States	Nearctic	New world	Tibellus maritimus
+United States	Nearctic	New world	Tibellus maritimus
+United States	Nearctic	New world	Tibellus maritimus
+United States	Nearctic	New world	Araneae
+Germany	Western Palaearctic	Old world	Tibellus oblongus
+China	Unknown	Unknown	Tibellus oblongus
+China	Unknown	Unknown	Tibellus oblongus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Russia	Western Palaearctic	Old world	Araneae
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Norway	Western Palaearctic	Old world	Tibellus maritimus
+United States	Nearctic	New world	Tibellus maritimus
+United States	Nearctic	New world	Tibellus oblongus
+Canada	Nearctic	New world	Tibellus oblongus
+Canada	Nearctic	New world	Tibellus oblongus
+Canada	Nearctic	New world	Tibellus oblongus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Norway	Western Palaearctic	Old world	Tibellus oblongus
+United States	Nearctic	New world	Tibellus maritimus
+United States	Nearctic	New world	Araneae
+Finland	Western Palaearctic	Old world	Tibellus oblongus
+Finland	Western Palaearctic	Old world	Tibellus oblongus
+Germany	Western Palaearctic	Old world	Tibellus maritimus
+Germany	Western Palaearctic	Old world	Tibellus oblongus
+Germany	Western Palaearctic	Old world	Tibellus maritimus
+Germany	Western Palaearctic	Old world	Tibellus oblongus
+Austria	Western Palaearctic	Old world	Tibellus oblongus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Russia	Western Palaearctic	Old world	Araneae
+Russia	Western Palaearctic	Old world	Araneae
+Poland	Western Palaearctic	Old world	Araneae
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Norway	Western Palaearctic	Old world	Tibellus maritimus
+United States	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus oblongus
+Canada	Nearctic	New world	Tibellus oblongus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+United States	Nearctic	New world	Tibellus maritimus
+United States	Nearctic	New world	Tibellus maritimus
+United States	Nearctic	New world	Tibellus maritimus
+United States	Nearctic	New world	Tibellus maritimus
+United States	Nearctic	New world	Tibellus maritimus
+Finland	Western Palaearctic	Old world	Tibellus oblongus
+Finland	Western Palaearctic	Old world	Tibellus oblongus
+Germany	Western Palaearctic	Old world	Tibellus oblongus
+Germany	Western Palaearctic	Old world	Tibellus oblongus
+Germany	Western Palaearctic	Old world	Tibellus oblongus
+Netherlands	Unknown	Unknown	Tibellus oblongus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Russia	Western Palaearctic	Old world	Araneae
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Norway	Western Palaearctic	Old world	Tibellus maritimus
+Finland	Western Palaearctic	Old world	Tibellus oblongus
+Canada	Nearctic	New world	Tibellus oblongus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+United States	Nearctic	New world	Tibellus maritimus
+United States	Nearctic	New world	Tibellus maritimus
+United States	Nearctic	New world	Tibellus maritimus
+United States	Nearctic	New world	Tibellus maritimus
+China	Unknown	Unknown	Tibellus oblongus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Germany	Western Palaearctic	Old world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Russia	Western Palaearctic	Old world	Araneae
+Canada	Nearctic	New world	Tibellus maritimus
+Norway	Western Palaearctic	Old world	Tibellus oblongus
+Norway	Western Palaearctic	Old world	Tibellus oblongus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus oblongus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+United States	Nearctic	New world	Tibellus maritimus
+United States	Nearctic	New world	Tibellus maritimus
+United States	Nearctic	New world	Tibellus maritimus
+Finland	Western Palaearctic	Old world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Germany	Western Palaearctic	Old world	Tibellus maritimus
+Germany	Western Palaearctic	Old world	Tibellus maritimus
+Germany	Western Palaearctic	Old world	Tibellus
+Netherlands	Unknown	Unknown	Tibellus oblongus
+Netherlands	Unknown	Unknown	Tibellus oblongus
+Norway	Unknown	Unknown	Tibellus oblongus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Russia	Western Palaearctic	Old world	Araneae
+Russia	Eastern Palaearctic	Old world	Araneae
+Norway	Western Palaearctic	Old world	Tibellus maritimus
+United States	Nearctic	New world	Tibellus oblongus
+Canada	Nearctic	New world	Tibellus oblongus
+Canada	Nearctic	New world	Tibellus oblongus
+Canada	Nearctic	New world	Tibellus oblongus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+United States	Nearctic	New world	Tibellus maritimus
+Finland	Western Palaearctic	Old world	Tibellus maritimus
+Finland	Western Palaearctic	Old world	Tibellus maritimus
+Germany	Western Palaearctic	Old world	Tibellus oblongus
+Germany	Western Palaearctic	Old world	Tibellus oblongus
+Germany	Western Palaearctic	Old world	Tibellus oblongus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Finland	Western Palaearctic	Old world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Russia	Eastern Palaearctic	Old world	Araneae
+Canada	Nearctic	New world	Tibellus maritimus
+Kazakhstan	Unknown	Unknown	Tibellus
+Finland	Western Palaearctic	Old world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Germany	Western Palaearctic	Old world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Araneae
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus oblongus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus oblongus
+Canada	Nearctic	New world	Tibellus oblongus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus oblongus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+United States	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus oblongus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Netherlands	Western Palaearctic	Old world	Tibellus oblongus
+Netherlands	Western Palaearctic	Old world	Tibellus oblongus
+Netherlands	Western Palaearctic	Old world	Tibellus oblongus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Russia	Western Palaearctic	Old world	Araneae
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Araneae
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Norway	Western Palaearctic	Old world	Tibellus oblongus
+Russia	Western Palaearctic	Old world	Araneae
+Canada	Nearctic	New world	Tibellus maritimus
+Bulgaria	Western Palaearctic	Old world	Tibellus oblongus
+Canada	Nearctic	New world	Tibellus oblongus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus oblongus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus oblongus
+Canada	Nearctic	New world	Tibellus maritimus
+Canada	Nearctic	New world	Tibellus maritimus

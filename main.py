@@ -23,6 +23,7 @@ def is_number(s):
     return False
 
 
+# Hover help function
 class ToolTip(object):
     def __init__(self, widget):
         self.widget = widget
@@ -34,6 +35,7 @@ class ToolTip(object):
         self.text = text
         if self.tipwindow or not self.text:
             return
+        # calculate where the tip should be shown
         x, y, cx, cy = self.widget.bbox("insert")
         x = x + self.widget.winfo_rootx() + 37
         y = y + cy + self.widget.winfo_rooty() + 27
@@ -67,9 +69,9 @@ def createtooltip(widget, text):
 
 class Mainprogramme:
     def __init__(self):
-        # main window
+        # variables
         self.datadic = {}
-        self.sequences = {}
+        self.lenseq = {}
         self.seqlenlist = []
         self.counter = {}
         self.window = tk.Tk()
@@ -262,8 +264,9 @@ class Mainprogramme:
         self.window.destroy()
 
     def newproject(self):
+        # when "new" function is performed, all dataset will be cleaned.
         self.datadic = {}
-        self.sequences = {}
+        self.lenseq = {}
         self.seqlenlist = []
         self.counter = {}
         self.coordinate = []
@@ -293,7 +296,7 @@ class Mainprogramme:
         self.canvas.delete("all")
         self.clearconsole()
 
-    # data description function: count, country, sex, taxon, iden_provider
+    # data description function
     # id:[seq, spe_name_out, countryin, sexin, iden_provider, iden_method]
     def datadescription(self, dic, filename, status):
         sexdic = {}
@@ -303,7 +306,9 @@ class Mainprogramme:
         worlddic = {}
         providerdic = {}
 
+        # if data hasn't been aligned
         if status == "na":
+            # read dic
             # dic structure: id:[seq, spe_name_out, countryin, sexin, iden_provider, georegion, world]
             count = str(len(dic)) + "\n"
             for key, value in dic.items():
@@ -344,6 +349,7 @@ class Mainprogramme:
                 else:
                     worlddic[world] += 1
         else:
+            # read dic
             # dic structure: length:[seq1, header1],[seq2, header2]. header: ID|Taxon|Country|Sex|Provider|geo|world
             count = 0
             for length, items in dic.items():
@@ -510,7 +516,7 @@ class Mainprogramme:
 
         # function of search button
         def searchfun():
-            self.sequences = {}
+            self.lenseq = {}
 
             if self.queryready:
                 queryurl = "http://www.boldsystems.org/index.php/API_Public/combined?"
@@ -646,9 +652,9 @@ class Mainprogramme:
 
         # dic structure: length:[seq1, header1],[seq2, header2]. header: ID|Taxon|Country|Sex|Provider|geo|world
         # datadic: id:[seq, spe_name_out, countryin, sexin, iden_provider, iden_method]
-        if len(self.sequences) != 0:
+        if len(self.lenseq) != 0:
             self.datadic = {}
-            for seqlen, datasets in self.sequences.items():
+            for seqlen, datasets in self.lenseq.items():
                 for data in datasets:
                     seq = data[0]
                     header = data[1]
@@ -675,21 +681,21 @@ class Mainprogramme:
                 filetype = xmlpath.split(".")[1]
                 if filetype == "xml":
                     self.datadic = readxml.readxml(xmlpath)
-                    self.sequences = {}
+                    self.lenseq = {}
                 elif filetype == "fas":
                     self.datadic = readxml.readfasta(xmlpath)
-                    self.sequences = {}
+                    self.lenseq = {}
                 elif filetype == "afas":
-                    self.sequences = readxml.readaligned(xmlpath)
+                    self.lenseq = readxml.readaligned(xmlpath)
                     # update counter
-                    (self.seqlenlist, self.counter) = self.updatelength(self.sequences)
+                    (self.seqlenlist, self.counter) = self.updatelength(self.lenseq)
 
                 # update console and data description
                 filename = xmlpath.rsplit("/", 1)[1]
                 if filetype != "afas":
                     self.datadescription(self.datadic, filename, "na")
                 else:
-                    self.datadescription(self.sequences, filename, "a")
+                    self.datadescription(self.lenseq, filename, "a")
                 self.console.config(state="normal")
                 self.console.insert("end", ">Load in completed\n")
                 self.console.see(tk.END)
@@ -718,7 +724,7 @@ class Mainprogramme:
 
         def saveasaligned(doc):
             sfile = open(doc, "w")
-            for length, contents in self.sequences.items():
+            for length, contents in self.lenseq.items():
                 for content in contents:
                     sseq = content[0] + "\n"
                     sheader = content[1].split("|")
@@ -738,7 +744,7 @@ class Mainprogramme:
 
         if len(self.descrip.get("0.0", "2.0")) > 1:
             if readin:
-                if len(self.sequences) != 0:
+                if len(self.lenseq) != 0:
                     # dic structure: length1:[[seq1, header1],[seq2, header2]]. header: ID|Taxon|Country|Sex|Provider|geo|world
                     docname = filedialog.asksaveasfilename(title='Save data at', defaultextension=".afas",
                                                            filetypes=[('Aligned FASTA', '*.afas')])
@@ -771,7 +777,7 @@ class Mainprogramme:
                     docname = "./datafile/aliedfas.fas"
                     file = open(docname, "w")
                     maxlen = max(self.seqlenlist)
-                    for le, cs in self.sequences.items():
+                    for le, cs in self.lenseq.items():
                         for c in cs:
                             seq = c[0]
                             mylen = len(seq)
@@ -1130,7 +1136,7 @@ class Mainprogramme:
         # filter button
         def seqfilter():
             if len(self.descrip.get("0.0", "2.0")) > 1:
-                if len(self.sequences) == 0:
+                if len(self.lenseq) == 0:
                     # data structure: id:[seq, spe_name_out, countryin, sexin, iden_provider, geo, world]
 
                     # filter by sex:
@@ -1279,9 +1285,9 @@ class Mainprogramme:
 
                         # Read in aligned data
                         alignedpath = "./datafile/aliedfas.fas"
-                        self.sequences = readxml.readaligned(alignedpath)
+                        self.lenseq = readxml.readaligned(alignedpath)
                         # update counter
-                        (self.seqlenlist, self.counter) = self.updatelength(self.sequences)
+                        (self.seqlenlist, self.counter) = self.updatelength(self.lenseq)
 
                         # Handle outliers
                         df = pd.DataFrame(self.seqlenlist)
@@ -1294,7 +1300,7 @@ class Mainprogramme:
                         upperlimit = q3 + (1.5 * iqr)
                         lowerlimit = q1 - (1.5 * iqr)
 
-                        alllength = np.array(list(self.sequences.keys()))
+                        alllength = np.array(list(self.lenseq.keys()))
                         uok = alllength[alllength > upperlimit]
                         lok = alllength[alllength < lowerlimit]
 
@@ -1305,14 +1311,14 @@ class Mainprogramme:
                             noo = max(alllength[alllength <= upperlimit])
                             for i in uok:
                                 # trim sequences
-                                for j in self.sequences[i]:
+                                for j in self.lenseq[i]:
                                     uoheader = j[1]
                                     uoseq = j[0]
                                     trimmedseq = uoseq[0: noo]
-                                    self.sequences[noo].append([trimmedseq, uoheader])
+                                    self.lenseq[noo].append([trimmedseq, uoheader])
                                     uol.append(uoheader)
                                     ntrim += 1
-                                del self.sequences[i]
+                                del self.lenseq[i]
 
                             self.console.config(state="normal")
                             self.console.insert("end", ">{0} sequences have been trimmed since they are longer outliers. "
@@ -1327,10 +1333,10 @@ class Mainprogramme:
                                 lol = []
                                 # discard lower outliers (need user confirm)
                                 for i in lok:
-                                    for j in self.sequences[i]:
+                                    for j in self.lenseq[i]:
                                         lol.append(j[1])
                                         ndiscard += 1
-                                    del self.sequences[i]
+                                    del self.lenseq[i]
 
                                 self.console.config(state="normal")
                                 self.console.insert("end",
@@ -1341,7 +1347,7 @@ class Mainprogramme:
                                 self.console.config(state="disable")
 
                         # update sequence length list
-                        (self.seqlenlist, self.counter) = self.updatelength(self.sequences)
+                        (self.seqlenlist, self.counter) = self.updatelength(self.lenseq)
 
                         # find out the seg sites
                         self.savefasta(False, "S")
@@ -1352,7 +1358,7 @@ class Mainprogramme:
                         alignedname = alignedname.rstrip('\n')
                         alignedname = alignedname.split(": ")[1]
                         alignedname = "aligned_" + alignedname
-                        self.datadescription(self.sequences, alignedname, "a")
+                        self.datadescription(self.lenseq, alignedname, "a")
 
                         self.console.config(state="normal")
                         self.console.insert("end", ">Alignment completed\n")
@@ -1548,17 +1554,17 @@ class Mainprogramme:
             if discardlen.isdigit():
                 if int(discardlen) <= max(self.counter.keys()):
                     # discard sequences
-                    self.sequences = discard(self.sequences, int(discardlen))
+                    self.lenseq = discard(self.lenseq, int(discardlen))
 
                     # update data description
                     alignedname = self.descrip.get("0.0", "2.0")
                     alignedname = alignedname.rstrip('\n')
                     alignedname = alignedname.split(": ")[1]
-                    self.datadescription(self.sequences, alignedname, "a")
+                    self.datadescription(self.lenseq, alignedname, "a")
 
                     # update sequence length list
                     countbefore = len(self.seqlenlist)
-                    (self.seqlenlist, self.counter) = self.updatelength(self.sequences)
+                    (self.seqlenlist, self.counter) = self.updatelength(self.lenseq)
 
                     messagebox.showinfo(parent=window_sumplot, title="Message",
                                         message="{0} sequences are discarded.".format(countbefore- len(self.seqlenlist)))
@@ -1607,25 +1613,25 @@ class Mainprogramme:
             if trimoption == "I":
                 inlen = en.get()
                 if inlen.isdigit():
-                    seq_trimmed = trim_with_length(self.sequences, inlen)
-                    self.sequences = seq_trimmed
+                    seq_trimmed = trim_with_length(self.lenseq, inlen)
+                    self.lenseq = seq_trimmed
                     fintrim()
                 else:
                     messagebox.showwarning(title="Warning", message="Length must be a positive integer!",
                                            parent=window_sumplot)
             elif trimoption == "L":
                 length_l = max(self.seqlenlist)
-                seq_trimmed = trim_with_length(self.sequences, length_l)
-                self.sequences = seq_trimmed
+                seq_trimmed = trim_with_length(self.lenseq, length_l)
+                self.lenseq = seq_trimmed
                 fintrim()
             else:
                 length_s = min(self.seqlenlist)
-                seq_trimmed = trim_with_length(self.sequences, length_s)
-                self.sequences = seq_trimmed
+                seq_trimmed = trim_with_length(self.lenseq, length_s)
+                self.lenseq = seq_trimmed
                 fintrim()
 
         if len(self.descrip.get("0.0", "2.0")) > 1:
-            if len(self.sequences) > 1:
+            if len(self.lenseq) > 1:
                 window_sumplot = tk.Toplevel(self.window)
                 window_sumplot.geometry('800x600')
                 window_sumplot.minsize(440, 360)
@@ -1705,12 +1711,12 @@ class Mainprogramme:
                 toolbar.update()
                 canvas.tkcanvas.pack(side="top", fill="both", expand="yes")
 
-            elif len(self.sequences) == 0:
+            elif len(self.lenseq) == 0:
                 messagebox.showwarning(title="Warning",
                                        message="Sequences should be aligned before doing summary plot.")
             else:
                 messagebox.showwarning(title="Warning", message="Sequences are already in the "
-                                                                "same length of {0}.".format(list(self.sequences.keys())[0]))
+                                                                "same length of {0}.".format(list(self.lenseq.keys())[0]))
         else:
             messagebox.showwarning(title="Warning", message="Empty data.")
 
@@ -1811,10 +1817,10 @@ class Mainprogramme:
         from itertools import islice
 
         if len(self.descrip.get("0.0", "2.0")) > 1:
-            if len(self.sequences) == 1:
+            if len(self.lenseq) == 1:
                 self.savefasta(False, "T")
                 file = open("./datafile/group.txt", "w", encoding="utf-8")
-                for ilen, seqs in self.sequences.items():
+                for ilen, seqs in self.lenseq.items():
                     for iseq in seqs:
                         header = iseq[1].split("|")
                         spices = header[1]
@@ -1882,9 +1888,9 @@ class Mainprogramme:
                 self.mouse_x = 0
                 self.mouse_x = 0
 
-            elif len(self.sequences) == 0:
+            elif len(self.lenseq) == 0:
                 messagebox.showwarning(title="Warning", message="Alignment is needed before drawing network!")
-            elif len(self.sequences) > 1:
+            elif len(self.lenseq) > 1:
                 messagebox.showwarning(title="Warning", message="Sequences are not in the same length.\n"
                                                                 "Please use the 'Summary plot' function for trimming.")
         else:
